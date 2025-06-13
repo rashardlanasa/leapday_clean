@@ -3,6 +3,18 @@ layout: default
 mermaid: true
 ---
 
+
+<object style="border-radius:0px" data="https://open.spotify.com/embed/album/1XSUdSojWNJCgNqKNxfcVr?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></object>
+
+
+{% for image in site.static_files %}
+  {% if image.path contains 'assets/images/gallery-1' %}
+    <img src="{{ image.path }}" alt="">
+  {% endif %}
+{% endfor %}
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/23WBvFOEKE7KYae5H1usrA?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
 # The View from the Top 
 A new composite image built from 15 satellite passes shows the Arctic and northern latitudes as you have never seen them before. 
 >Image by Norman Kuring, NASA/GSFC/Suomi NPP. Caption by Michael Carlowicz. Suomi NPP is the result of a partnership between NASA, NOAA and the Department of Defense.
