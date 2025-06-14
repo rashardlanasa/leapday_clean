@@ -2,7 +2,15 @@
 layout: default
 mermaid: true
 ---
-
+{% for image in site.static_files %}
+  {% if image.path contains 'assets/images/gallery-1' %}
+    {% unless image.path contains '-th.' %}
+      <a href="{{ image.path }}">
+        <img src="{{ image.basename | append: '-th' | append: image.extname }}" alt="">
+      </a>
+    {% endunless %}
+  {% endif %}
+{% endfor %}
 
 <object style="border-radius:0px" data="https://open.spotify.com/embed/album/1XSUdSojWNJCgNqKNxfcVr?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></object>
 
